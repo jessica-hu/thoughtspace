@@ -1,0 +1,21 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Jessica Hu
+email: j.hu@berkeley.edu
+description: > # this means to ignore newlines until "baseurl:"
+  Personal website for Jessica Hu, studying computer science and statistics
+  at UC Berkeley, class of '19.
+baseurl: "" # the subpath of your site, e.g. /blog
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  jessica-hu
+facebook_username: jessica.hu.357
+
+# Build settings
+markdown: kramdown

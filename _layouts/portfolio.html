@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+  <head>
+         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta     name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+        <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+        <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="icon" href="{{ site.baseurl }}/images/logo-2.png">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    
+        <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
+        <script type='text/javascript' src='../scripts/main.js'></script>
+      
+		<link rel="stylesheet" type="text/css" href="../css/component.css" />
+		<script src="../scripts/modernizr.custom.js"></script>
+      
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+      
+	</head>
+
+  <body>
+      
+      <header class="sidebar">
+
+          <div class="sidebar-wrapper">
+
+            <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo-2.png" style="height:100px;margin-left:95px"></a>
+
+              <nav class="cl-effect-1 site-nav">
+                <a href="{{ site.baseurl }}/">home</a>
+                <a href="{{ site.baseurl }}/projects/">projects</a>
+                <a href="{{ site.baseurl }}/design/">design</a>
+                </nav>
+            </div>
+    
+      </header>
+
+      
+      <div class="page-content" style=' -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;'>
+      <div class="wrapper">
+        <div class="container">
+            <ul class="grid effect-2" id="grid" style='padding:0;margin:0;'>
+                {{ content }}
+            </ul>
+          </div>
+      </div>
+    </div>
+
+		
+		<script src="../scripts/masonry.pkgd.min.js"></script>
+		<script src="../scripts/imagesloaded.js"></script>
+		<script src="../scripts/classie.js"></script>
+		<script src="../scripts/AnimOnScroll.js"></script>
+		<script>
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.4,
+				maxDuration : 0.7,
+				viewportFactor : 0.2
+			} );
+		</script>
+	</body>
+</html>
